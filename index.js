@@ -20,14 +20,17 @@ function doSomething(e) {
     console.log(e.srcElement.id);
     // kan jeg skape en slags dobbelslag med dette?
     document.getElementById(e.srcElement.id).click()
-    document.getElementById(e.srcElement.id)
-    e.target.style.color = "purple"
-} */
+    
+} 
 
-// document.body.addEventListener("click", doSomething)
+document.body.addEventListener("click", doSomething)
+*/
+
 
 document.body.addEventListener('click', (e) => {
-    e.target.style.color = "purple"
+    console.log(e);
+    console.log(e.target.id);
+    e.target.style.color = "red"
+    //if (e.target.nodeName)
     
 })
-
