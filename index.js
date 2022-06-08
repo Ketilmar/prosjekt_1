@@ -45,8 +45,8 @@ function drums(keys) {
             break;
 
         case "w":
-            let kick07 = new Audio("audio/CYCdh_K1close_Kick-07.wav")
-            kick07.play()
+            let kick01 = new Audio("audio/CYCdh_K1close_Kick-07.wav")
+            kick01.play()
             break;
 
         case "e":
