@@ -1,5 +1,6 @@
 main  {
-    display: flex;
+    /* display: flex; */
+    position: absolute;
 }
 
 main > button {
@@ -35,8 +36,8 @@ main > img {
 /* placing buttons on drums */
 #kick {
     position: absolute;
-    right: 48.5%;
-    top: 79%;
+    right: 49%;
+    top: 66%;
     width: 8%;
     height: 8%;
     /* border: 0; */
@@ -45,16 +46,16 @@ main > img {
 
 #flam {
     position: absolute;
-    right: 26%;
-    top: 73%;
+    right: 25%;
+    top: 61%;
     width: 4%;
     height: 4%;
 }
 
 #tom1 {
     position: absolute;
-    right: 76%;
-    top: 70%;
+    right: 77%;
+    top: 61%;
     width: 8%;
     height: 8%;
 }

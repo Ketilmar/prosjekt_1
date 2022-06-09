@@ -1,0 +1,2 @@
+--  lage en funksjon som gir meg rytmer, basert på input fra bruker
+    dette blir vel kanskje en switch?
