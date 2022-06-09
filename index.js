@@ -26,16 +26,27 @@ function doSomething(e) {
 document.body.addEventListener("click", doSomething)
 */
 
+// listen for mouse click events and sends the button name to the drum() function
+document.body.addEventListener('click', (e) => {
+    console.log(e);
+    drums(e.target.innerHTML)
+    // under is part of testing for different way with using a class of objects 
+    // audioFiles.e.play()
+    let test1 = e.target.innerHTML
+    console.log(audioFiles.test1);
+})
 
-document.body.addEventListener('keypress', (e) => {
+
+// listen for keypress and sends the key name to the drum() function
+document.body.addEventListener('keydown', (e) => {
     console.log(e);
     console.log(e.key);
     e.target.style.color = "red"
     drums(e.key)
-    //if (e.target.nodeName)
-    
-})
+})    
 
+
+// takes the input key name and plays corresponding sound
 function drums(keys) {
     switch (keys){
         case "q":
@@ -63,5 +74,24 @@ function drums(keys) {
             let tom03 = new Audio("audio/CYCdh_Kurz01-Tom03.wav");
             tom03.play()
             break;
+
+        case "a":
+            let cymbal01 = new Audio("audio/China-Cymbal-Crash-Level-4A-www.fesliyanstudios.com.mp3")
+            cymbal01.play()
+            break;
+
+        case "s":
+            let hiHat01 = new Audio("audio/Hi-Hat-Closed-Hit-B1-www.fesliyanstudios.com.mp3")
+            hiHat01.play()
+            break;
     }; // end switch
 }; // end function
+
+
+// testing new method
+let audioFiles = {
+    "q": new Audio("audio/CYCdh_K1close_Flam-01.wav"),
+    kick01: new Audio("audio/CYCdh_K1close_Kick-07.wav")
+    // test01: "dette er en test"
+}
+

@@ -50,6 +50,7 @@ main > img {
     top: 61%;
     width: 4%;
     height: 4%;
+    border-radius: 10px;
 }
 
 #tom1 {
@@ -58,5 +59,41 @@ main > img {
     top: 61%;
     width: 8%;
     height: 8%;
+    border-radius: 10px;
 }
 
+#tom2 {
+    position: absolute;
+    right: 64%;
+    top: 36%;
+    width: 8%;
+    height: 8%;
+    border-radius: 10px;
+}
+
+#tom3 {
+    position: absolute;
+    right: 34%;
+    top: 36%;
+    width: 8%;
+    height: 8%;
+    border-radius: 10px;
+}
+
+#cymbal01 {
+    position: absolute;
+    right: 74%;
+    top: 12%;
+    width: 8%;
+    height: 8%;
+    border-radius: 10px;
+}
+
+#hihat01 {
+    position: absolute;
+    right: 12%;
+    top: 29%;
+    width: 8%;
+    height: 8%;
+    border-radius: 10px;
+}
