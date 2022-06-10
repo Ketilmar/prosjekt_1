@@ -1,24 +1,9 @@
-// document.addEventListener("click", testFunksjon)
 
-
-// function testFunksjon() {
-//     document.getElementById("test-klasse").innerHTML = "hallo";
-//     // console.log("testoutput");
-// }
-
-
-// const trommesett = document.querySelector("drumset")
-
-/*
-document.addEventListener("click", (e) => {
-    console.log(document.getElementById("drum-1").innerHTML = e)
-})
-*/
 
  /*
 function doSomething(e) {
     console.log(e.srcElement.id);
-    // kan jeg skape en slags dobbelslag med dette?
+    // dobbelslag?
     document.getElementById(e.srcElement.id).click()
     
 } 
@@ -26,25 +11,30 @@ function doSomething(e) {
 document.body.addEventListener("click", doSomething)
 */
 
-// listen for mouse click events and sends the button name to the drum() function
+/////////////////////////////
+////////// Drumkit //////////
+/////////////////////////////
+
+// this is as far as i got. I know the code can be more efficient, but not exactly how to do it.
+// Will revisit at a later stage.
+
+
+
+// listen for click events, sends the button name to the drum() function
 document.body.addEventListener('click', (e) => {
-    console.log(e);
-    drums(e.target.innerHTML)
-    // under is part of testing for different way with using a class of objects 
-    // audioFiles.e.play()
-    let test1 = e.target.innerHTML
-    console.log(audioFiles.test1);
+    // console.log(e);
+    drums(e.target.innerText)
 })
 
 
 // listen for keydown event. Sends the key name to the drum() function
+// choosing to use 'key' to specify capital letter or not
 document.body.addEventListener('keydown', (e) => {
-    console.log(e);
-    console.log(e.key);
-    e.target.style.color = "red"
+    // console.log(e);
     drums(e.key)
 })    
 
+// querySelectors searching for first html element match. Using this for css "animation" 
 const flam01Cont = document.querySelector("#flam")
 const kick01Cont = document.querySelector("#kick")
 const tom01Cont = document.querySelector("#tom1")
@@ -53,13 +43,14 @@ const tom03Cont = document.querySelector("#tom3")
 const cymbal01Cont = document.querySelector("#cymbal01")
 const hihat01Cont = document.querySelector("#hihat01")
 
-// takes the input key name and plays corresponding sound
+// Takes the input key name and plays corresponding sound.
+// Making the switch as a function, so it can be called from different eventlisteners
 function drums(keys) {
     switch (keys){
         case "q":
             let flam01 = new Audio("audio/CYCdh_K1close_Flam-01.wav")
             flam01.play()
-                // adding 'playing' class to active button, timeout after 100 ms.
+                // Adding 'playing' class to active button, so css 'animation' activates. Timeout after 100 ms.
             flam01Cont.classList.add("playing")
             setTimeout(() => flam01Cont.classList.remove("playing"), 100)
             break;
