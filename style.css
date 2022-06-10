@@ -5,6 +5,8 @@ main  {
 
 main > button {
     background: aquamarine;
+    font-size: 32px;
+    font-weight: bolder;
 }
 
 main > button:active {
@@ -48,8 +50,8 @@ main > img {
     position: absolute;
     right: 25%;
     top: 61%;
-    width: 4%;
-    height: 4%;
+    width: 8%;
+    height: 8%;
     border-radius: 10px;
 }
 
@@ -96,4 +98,8 @@ main > img {
     width: 8%;
     height: 8%;
     border-radius: 10px;
+}
+
+.playing {
+    background: darkblue;
 }
